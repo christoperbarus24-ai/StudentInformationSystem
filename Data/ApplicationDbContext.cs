@@ -3,8 +3,6 @@
 // Course: Framework .NET Programming
 using Microsoft.EntityFrameworkCore;
 using StudentInformationSystem.Models;
-using System.Collections.Generic;
-using System.Reflection.Emit;
 namespace StudentInformationSystem.Data
 {
     public class ApplicationDbContext : DbContext
