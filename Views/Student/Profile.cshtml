@@ -1,0 +1,31 @@
+﻿<!-- Name: Christoper Hiero Barus -->
+<!-- NIM: 2481036 -->
+<!-- Course: Framework .NET Programming -->
+<!-- Declare the Model -->
+@model StudentInformationSystem.Models.Student
+<!-- Declare the Title for Browser -->
+@{
+    ViewData["Title"] = "Student Profile";
+}
+<h1>Student Profile</h1>
+<hr />
+<h3>Personal Information</h3>
+<p><strong>NIM: </strong> @Model.NIM</p>
+<p><strong>Name: </strong> @Model.Name</p>
+<p><strong>Major: </strong> @Model.Major</p>
+<p><strong>Semester: </strong> @Model.Semester</p>
+<p><strong>GPA: </strong> @Model.GPA.ToString("F2")</p>
+<hr />
+<!-- Determining the Academic Status based on GPA-->
+@if (Model.GPA >= 3.51)
+{
+    <p style="color: green"><b>Academic Status: CUMLAUDE!</b></p>
+}
+else if (Model.GPA >= 2.67)
+{
+    <p><b>Academic Status: PASS</b></p>
+}
+else
+{
+    <p style="color: red"><b>Academic Status: Not Passed!</b></p>
+}
