@@ -1,0 +1,11 @@
+{
+  "name": "Student Information System - .NET + MySQL",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "forwardPorts": [5000],
+  "portsAttributes": {
+    "5000": { "label": "ASP.NET Core MVC and API" }
+  }
+}
