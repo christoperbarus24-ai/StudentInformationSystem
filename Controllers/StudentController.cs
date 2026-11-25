@@ -15,7 +15,7 @@ namespace StudentInformationSystem.Controllers
         //returns NotFound if the record was deleted
         public async Task<IActionResult> Profile(string? nim)
         {
-            nim ??= "NIM ASLI ANDA"; // an existing sample NIM
+            nim ??= "2481036"; // an existing sample NIM
             var student = await _db.Students.AsNoTracking()
                 .FirstOrDefaultAsync(s => s.NIM == nim);
             if (student is null) return NotFound();
